@@ -1,0 +1,17 @@
+{
+  "name": "post-api",
+  "version": "1.0.0",
+  "description": "Small API built with Express",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "post",
+    "api",
+    "express"
+  ],
+  "author": "Shiniasse",
+  "dependencies": {
+    "express": "4.19.2"
+  }
+}
