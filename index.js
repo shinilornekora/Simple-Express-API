@@ -1,11 +1,11 @@
 const express = require('express');
-const { users, posts, health } = require('./src/controllers');
+const controllers = require('./src/controllers');
 
 const server = express();
 
-server.use('/users', users);
-server.use('/posts', posts);
-server.use('/health', health);
+server.use('/users', controllers.users);
+server.use('/posts', controllers.posts);
+server.use('/health', controllers.health);
 
 server.use((req, res) => {
 	res.status(404).send(`\n
