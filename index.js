@@ -7,8 +7,11 @@ server.use('/users', users);
 server.use('/posts', posts);
 server.use('/health', health);
 
-server.use((_, res) => {
-	res.status(404).send('\nТакого пути не нашлось!\n')
+server.use((req, res) => {
+	res.status(404).send(`\n
+		Ответа не предусмотрено!
+		Запрошенный путь: ${req.originalUrl}
+	\n`)
 });
 
 server.listen(3000, () => {
