@@ -7,7 +7,7 @@ base.mode = 'production';
 base.plugins = [
     new webpack.ContextReplacementPlugin(
         /express\/lib/,
-        resolve(__dirname, '../node_modules'),
+        resolve(__dirname, './node_modules'),
         {
             'ejs': 'ejs'
         }
